@@ -11,20 +11,24 @@ public class Minstrel implements Runnable {
 	public void run() {
 		String line2 = String.format("minstrel waiting with thread:%s", Thread.currentThread().getId());
 		System.out.println(line2);
+		try {
+			Thread.sleep((long)(Math.random() * 1000));
+		}
+		catch (InterruptedException exc){
+			exc.printStackTrace();
+		}
 		try{
 			_barrier.arrive();
 		}
 		catch (InterruptedException exc){
 			exc.printStackTrace();
 		}
-		/*
 		try {
-			Thread.sleep(1000);
+			Thread.sleep((long)(Math.random() * 1000));
 		}
 		catch (InterruptedException exc){
 			exc.printStackTrace();
 		}
-		*/
 		try{
 			_barrier.complete();
 		}
