@@ -18,6 +18,7 @@ public class EventBarrier extends AbstractEventBarrier {
 				this.wait();
 			}
 		}
+		System.out.println("Gate already open");
 		waiters++;
 		//otherwise gate is open, everyone goes through
 	}
