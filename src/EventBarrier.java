@@ -18,6 +18,7 @@ public class EventBarrier extends AbstractEventBarrier {
 				this.wait();
 			}
 		}
+		waiters++;
 		//otherwise gate is open, everyone goes through
 	}
 	@Override

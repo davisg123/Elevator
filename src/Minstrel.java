@@ -17,12 +17,14 @@ public class Minstrel implements Runnable {
 		catch (InterruptedException exc){
 			exc.printStackTrace();
 		}
+		/*
 		try {
 			Thread.sleep(1000);
 		}
 		catch (InterruptedException exc){
 			exc.printStackTrace();
 		}
+		*/
 		try{
 			_barrier.complete();
 		}
